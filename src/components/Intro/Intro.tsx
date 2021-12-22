@@ -1,6 +1,7 @@
-import React from "react";
+import React, { FC } from "react";
+import { IntroProps } from "../../interfaces/index";
 
-const Intro = () => {
+const Intro: FC<IntroProps> = ({ score, bestScore }) => {
   return (
     <>
       <section className="flex">
@@ -8,11 +9,11 @@ const Intro = () => {
         <section className="flex ml-auto h-16 leading-3 mr-3">
           <div className="rounded-sm bg-custom-500  w-28 font-bold text-center ">
             <p className="text-custom-200 text-lg pt-1">SCORE</p>
-            <p className="text-custom-100 text-2xl">764</p>
+            <p className="text-custom-100 text-2xl">{score}</p>
           </div>
           <div className="rounded-sm bg-custom-500  w-28 font-bold text-center ml-2">
             <p className="text-custom-200 text-lg pt-1">BEST</p>
-            <p className="text-custom-100 text-2xl">764</p>
+            <p className="text-custom-100 text-2xl">{bestScore}</p>
           </div>
         </section>
       </section>
