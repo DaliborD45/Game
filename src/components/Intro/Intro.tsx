@@ -1,7 +1,12 @@
 import React, { FC } from "react";
-import { IntroProps } from "../../interfaces/index";
+import { IntroProps } from "../../interfaces/interfaces";
 
-const Intro: FC<IntroProps> = ({ score, bestScore }) => {
+const Intro: FC<IntroProps> = ({ score, bestScore, setGameOver, setHint }) => {
+  const handleHint = () => {
+    setGameOver(true);
+    setTimeout(() => setGameOver(false), 3000);
+  };
+  
   return (
     <>
       <section className="flex">
@@ -20,10 +25,20 @@ const Intro: FC<IntroProps> = ({ score, bestScore }) => {
       <section className="flex mt-5 ">
         <div className="font-semibold text-lg mt-2 text-custom-600">
           <p>Find 3 ships hidden in the boxes!</p>
-          <p className="underline hover:text-custom-400">How to play?</p>
+          <p
+            onClick={() => setHint(true)}
+            className="underline hover:text-custom-400"
+          >
+            How to play?
+          </p>
         </div>
         <div className="rounded-sm bg-custom-600 h-10 mt-3 mr-3 w-36 font-bold text-center ml-auto hover:opacity-95">
-          <p className="text-custom-100 text-xl py-1.5 ">New Game</p>
+          <p
+            className="text-custom-100 text-xl py-1.5 "
+            onClick={() => handleHint}
+          >
+            New Game
+          </p>
         </div>
       </section>
     </>
