@@ -8,7 +8,7 @@ const Bottom: FC<BottomProps> = ({ hint }) => {
           hint && "bg-yellow-200 py-1"
         }`}
       >
-        Try to open 3 boxes in a row and find images as soon as possible!
+        Tap on 3 tiles in a row and find candy canes as soon as possible!
       </p>
     </section>
   );

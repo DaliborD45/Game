@@ -6,11 +6,15 @@ const Intro: FC<IntroProps> = ({ score, bestScore, setGameOver, setHint }) => {
     setGameOver(true);
     setTimeout(() => setGameOver(false), 3000);
   };
-  
+
   return (
     <>
       <section className="flex">
-        <h1 className="font-semibold text-6xl text-custom-700 mt-5">Ships</h1>
+        <section>
+          <h1 className="font-semibold text-4xl text-custom-700 mt-3">
+            Xmas Game!
+          </h1>
+        </section>
         <section className="flex ml-auto h-16 leading-3 mr-3">
           <div className="rounded-sm bg-custom-500  w-28 font-bold text-center ">
             <p className="text-custom-200 text-lg pt-1">SCORE</p>
@@ -24,7 +28,7 @@ const Intro: FC<IntroProps> = ({ score, bestScore, setGameOver, setHint }) => {
       </section>
       <section className="flex mt-5 ">
         <div className="font-semibold text-lg mt-2 text-custom-600">
-          <p>Find 3 ships hidden in the boxes!</p>
+          <p>Find 3 candy canes hidden in the boxes!</p>
           <p
             onClick={() => setHint(true)}
             className="underline hover:text-custom-400"

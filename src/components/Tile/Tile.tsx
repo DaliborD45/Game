@@ -2,7 +2,7 @@ import React, { FC, useState, useEffect } from "react";
 import { TileProps } from "../../interfaces/interfaces";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { faPoo } from "@fortawesome/free-solid-svg-icons";
+import { faCandyCane } from "@fortawesome/free-solid-svg-icons";
 const Tile: FC<TileProps> = ({
   id,
   score,
@@ -47,7 +47,7 @@ const Tile: FC<TileProps> = ({
     >
       {randomIdsArr.includes(id) && (isOpen || isPermaOpen) && (
         <FontAwesomeIcon
-          icon={faPoo}
+          icon={faCandyCane}
           className="text-custom-600 ml-2 mt-2"
           size="3x"
         />
