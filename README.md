@@ -1,6 +1,9 @@
 ## Christmas Game
 Little Christmas game project.<br/>
 
+##Link to the app:
+https://happy-allen-48a271.netlify.app/
+
 ## Available Scripts
 
 In the project directory, you can run:
