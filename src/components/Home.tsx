@@ -20,7 +20,7 @@ const Home = () => {
           setGameOver={setGameOver}
           setHint={setHint}
         />
-        {isGameOver && <GameOver score={score} />}
+        {isGameOver  && <GameOver score={score} />}
         <Board
           setScore={setScore}
           setBestScore={setBestScore}

@@ -3,10 +3,10 @@ import { IntroProps } from "../../interfaces/interfaces";
 
 const Intro: FC<IntroProps> = ({ score, bestScore, setGameOver, setHint }) => {
   const handleHint = () => {
-    setGameOver(true);
-    setTimeout(() => setGameOver(false), 3000);
+    setHint(true);
+    setTimeout(() => setHint(false), 3000);
   };
-
+  const handleGameReset = () => window.location.reload();
   return (
     <>
       <section className="flex">
@@ -30,7 +30,7 @@ const Intro: FC<IntroProps> = ({ score, bestScore, setGameOver, setHint }) => {
         <div className="font-semibold text-lg mt-2 text-custom-600">
           <p>Find 3 candy canes hidden in the boxes!</p>
           <p
-            onClick={() => setHint(true)}
+            onClick={() => handleHint()}
             className="underline hover:text-custom-400"
           >
             How to play?
@@ -39,7 +39,7 @@ const Intro: FC<IntroProps> = ({ score, bestScore, setGameOver, setHint }) => {
         <div className="rounded-sm bg-custom-600 h-10 mt-3 mr-3 w-36 font-bold text-center ml-auto hover:opacity-95">
           <p
             className="text-custom-100 text-xl py-1.5 "
-            onClick={() => handleHint}
+            onClick={() => handleGameReset()}
           >
             New Game
           </p>

@@ -1,7 +1,6 @@
 ## Christmas Game
 Little Christmas game project.<br/>
 
-
 ## Available Scripts
 
 In the project directory, you can run:
