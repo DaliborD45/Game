@@ -28,9 +28,11 @@ const Tile: FC<TileProps> = ({
   }, [score]);
   useEffect(() => {
     if (isGameOver) {
-      setTimeout(() => setPermaOpen(false), 2800);
-      setTimeout(() => setOpen(false), 2800);
-      setTimeout(() => setScore(0), 2800);
+      setTimeout(() => {
+        setPermaOpen(false);
+        setOpen(false);
+        setScore(0);
+      }, 2800);
       setTimeout(() => setFindedTiles(0), 2000);
     }
   }, [isGameOver]);
